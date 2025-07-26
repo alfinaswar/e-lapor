@@ -62,8 +62,8 @@
 @endsection
 @push('js')
     <script>
-        $(document).ready(function() {
-            $('body').on('click', '.btn-delete', function() {
+        $(document).ready(function () {
+            $('body').on('click', '.btn-delete', function () {
                 var id = $(this).data('id');
                 Swal.fire({
                     title: 'Hapus Data?',
@@ -81,7 +81,7 @@
                             data: {
                                 _token: '{{ csrf_token() }}'
                             },
-                            success: function(response) {
+                            success: function (response) {
                                 if (response.status === 200) {
                                     Swal.fire(
                                         'Dihapus!',
@@ -103,7 +103,7 @@
                                     );
                                 }
                             },
-                            error: function(xhr) {
+                            error: function (xhr) {
                                 Swal.fire(
                                     'Gagal!',
                                     xhr.responseJSON?.message ??
@@ -132,29 +132,29 @@
                         }
                     },
                     columns: [{
-                            data: 'DT_RowIndex',
-                            name: 'DT_RowIndex',
-                            orderable: false,
-                            searchable: false
-                        },
-                        {
-                            data: 'Nama',
-                            name: 'Nama'
-                        },
-                        {
-                            data: 'KodeUnit',
-                            name: 'KodeUnit'
-                        },
-                        {
-                            data: 'Deskripsi',
-                            name: 'Deskripsi'
-                        },
-                        {
-                            data: 'action',
-                            name: 'action',
-                            orderable: false,
-                            searchable: false
-                        }
+                        data: 'DT_RowIndex',
+                        name: 'DT_RowIndex',
+                        orderable: false,
+                        searchable: false
+                    },
+                    {
+                        data: 'Nama',
+                        name: 'Nama'
+                    },
+                    {
+                        data: 'KodeUnit',
+                        name: 'KodeUnit'
+                    },
+                    {
+                        data: 'Deskripsi',
+                        name: 'Deskripsi'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    }
                     ]
                 });
             }

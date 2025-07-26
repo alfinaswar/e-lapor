@@ -23,7 +23,7 @@ class MasterUnitKerjaController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
                     $btnEdit = '<a href="' . route('muk.edit', encrypt($row->id)) . '" class="btn btn-primary btn-sm btn-edit" title="Edit"><i class="fas fa-edit"></i></a>';
-                    $btnDelete = '<a href="javascript:void(0)" data-id="' . $row->id . '" class="btn btn-danger btn-sm btn-delete" title="Hapus"><i class="fas fa-trash-alt"></i></a>';
+                    $btnDelete = '<a href="javascript:void(0)" data-id="' . encrypt($row->id) . '" class="btn btn-danger btn-sm btn-delete" title="Hapus"><i class="fas fa-trash-alt"></i></a>';
                     return $btnEdit . '  ' . $btnDelete;
                 })
                 ->rawColumns(['action'])
@@ -58,7 +58,7 @@ class MasterUnitKerjaController extends Controller
         $data['UserCreate'] = auth()->user()->name;
         $data['UserId'] = auth()->user()->id;
         MasterUnitKerja::create($data);
-        return redirect()->route('master-unit-kerja.index')->with('success', 'Berhasil Menambahkan Unit Kerja');
+        return redirect()->route('muk.index')->with('success', 'Berhasil Menambahkan Unit Kerja');
     }
 
     /**
@@ -97,7 +97,7 @@ class MasterUnitKerjaController extends Controller
         $id = Crypt::decrypt($id);
         $data = MasterUnitKerja::find($id);
         $data->update($request->all());
-        return redirect()->route('master-unit-kerja.index')->with('success', 'Berhasil Memperbarui Unit Kerja');
+        return redirect()->route('muk.index')->with('success', 'Berhasil Memperbarui Unit Kerja');
     }
 
     /**
@@ -106,6 +106,7 @@ class MasterUnitKerjaController extends Controller
     public function destroy($id)
     {
         $id = Crypt::decrypt($id);
+        // dd($id);
         $cek = LaporanDinas::where('UnitKerja', $id)->get();
         if (count($cek) <= 0) {
             $data = MasterUnitKerja::find($id);

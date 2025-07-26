@@ -108,14 +108,14 @@
                                     <h6><span><i data-feather="user" class="feather-16"></i></span>Customers</h6>
                                     <ul class="customers">
                                         <li><a href="javascript:void(0);">Aron Varu<img
-                                                    src="{{ asset('') }}assets/img/profiles/avator1.jpg"
-                                                    alt="" class="img-fluid"></a></li>
+                                                    src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt=""
+                                                    class="img-fluid"></a></li>
                                         <li><a href="javascript:void(0);">Jonita<img
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-01.jpg"
-                                                    alt="" class="img-fluid"></a></li>
+                                                    src="{{ asset('') }}assets/img/profiles/avatar-01.jpg" alt=""
+                                                    class="img-fluid"></a></li>
                                         <li><a href="javascript:void(0);">Aaron<img
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-10.jpg"
-                                                    alt="" class="img-fluid"></a></li>
+                                                    src="{{ asset('') }}assets/img/profiles/avatar-10.jpg" alt=""
+                                                    class="img-fluid"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -141,23 +141,19 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('') }}assets/img/store/store-01.png" alt="Store Logo"
-                                class="img-fluid">
+                            <img src="{{ asset('') }}assets/img/store/store-01.png" alt="Store Logo" class="img-fluid">
                             Grocery Alpha
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('') }}assets/img/store/store-02.png" alt="Store Logo"
-                                class="img-fluid">
+                            <img src="{{ asset('') }}assets/img/store/store-02.png" alt="Store Logo" class="img-fluid">
                             Grocery Apex
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('') }}assets/img/store/store-03.png" alt="Store Logo"
-                                class="img-fluid">
+                            <img src="{{ asset('') }}assets/img/store/store-03.png" alt="Store Logo" class="img-fluid">
                             Grocery Bevy
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('') }}assets/img/store/store-04.png" alt="Store Logo"
-                                class="img-fluid">
+                            <img src="{{ asset('') }}assets/img/store/store-04.png" alt="Store Logo" class="img-fluid">
                             Grocery Eden
                         </a>
                     </div>
@@ -218,8 +214,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt=""
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-02.jpg">
+                                                <img alt="" src="{{ asset('') }}assets/img/profiles/avatar-02.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">John Doe</span> added
@@ -236,8 +231,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt=""
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-03.jpg">
+                                                <img alt="" src="{{ asset('') }}assets/img/profiles/avatar-03.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Tarah
@@ -254,8 +248,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt=""
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-06.jpg">
+                                                <img alt="" src="{{ asset('') }}assets/img/profiles/avatar-06.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Misty Tison</span>
@@ -272,8 +265,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt=""
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-17.jpg">
+                                                <img alt="" src="{{ asset('') }}assets/img/profiles/avatar-17.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Rolland Webber</span>
@@ -290,8 +282,7 @@
                                     <a href="activities.html">
                                         <div class="media d-flex">
                                             <span class="avatar flex-shrink-0">
-                                                <img alt=""
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-13.jpg">
+                                                <img alt="" src="{{ asset('') }}assets/img/profiles/avatar-13.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Bernardo
@@ -320,8 +311,7 @@
                     <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
                         <span class="user-info">
                             <span class="user-letter">
-                                <img src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt=""
-                                    class="img-fluid">
+                                <img src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt="" class="img-fluid">
                             </span>
                             <span class="user-detail">
                                 <span class="user-name">John Smilga</span>
@@ -332,8 +322,7 @@
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <div class="profileset">
-                                <span class="user-img"><img src="{{ asset('') }}assets/img/profiles/avator1.jpg"
-                                        alt="">
+                                <span class="user-img"><img src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt="">
                                     <span class="status online"></span></span>
                                 <div class="profilesets">
                                     <h6>John Smilga</h6>
@@ -348,8 +337,7 @@
                                     data-feather="settings"></i>Settings</a>
                             <hr class="m-0">
                             <a class="dropdown-item logout pb-0" href="signin.html"><img
-                                    src="{{ asset('') }}assets/img/icons/log-out.svg" class="me-2"
-                                    alt="img">Logout</a>
+                                    src="{{ asset('') }}assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
                         </div>
                     </div>
                 </li>
@@ -662,8 +650,7 @@
                                     </ul>
                                 </li>
                                 <li class="submenu">
-                                    <a href="javascript:void(0);"><i
-                                            data-feather="database"></i><span>Icons</span><span
+                                    <a href="javascript:void(0);"><i data-feather="database"></i><span>Icons</span><span
                                             class="menu-arrow"></span></a>
                                     <ul>
                                         <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
@@ -711,8 +698,7 @@
                                     </ul>
                                 </li>
                                 <li class="submenu">
-                                    <a href="javascript:void(0);"><i
-                                            data-feather="columns"></i><span>Tables</span><span
+                                    <a href="javascript:void(0);"><i data-feather="columns"></i><span>Tables</span><span
                                             class="menu-arrow"></span></a>
                                     <ul>
                                         <li><a href="tables-basic.html">Basic Tables </a></li>
@@ -808,9 +794,8 @@
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="tablinks nav-link active" href="#set4" id="set-tab4"
-                                    data-bs-toggle="tab" data-bs-target="#document" role="tab"
-                                    aria-selected="true">
+                                <a class="tablinks nav-link active" href="#set4" id="set-tab4" data-bs-toggle="tab"
+                                    data-bs-target="#document" role="tab" aria-selected="true">
                                     <i data-feather="user"></i>
                                 </a>
                             </li>
@@ -843,8 +828,7 @@
                                         class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="chat.html">Chat</a></li>
-                                    <li class="submenu submenu-two"><a
-                                            href="javascript:void(0);"><span>Call</span><span
+                                    <li class="submenu submenu-two"><a href="javascript:void(0);"><span>Call</span><span
                                                 class="menu-arrow inside-submenu"></span></a>
                                         <ul>
                                             <li><a href="video-call.html">Video Call</a></li>
@@ -890,8 +874,7 @@
                             <li><a href="stock-adjustment.html"><span>Stock Adjustment</span></a></li>
                             <li><a href="stock-transfer.html"><span>Stock Transfer</span></a></li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Expenses</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Expenses</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="expense-list.html">Expenses</a></li>
                                     <li><a href="expense-category.html">Expense Category</a></li>
@@ -1270,8 +1253,7 @@
                                         class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="chat.html">Chat</a></li>
-                                    <li class="submenu submenu-two"><a
-                                            href="javascript:void(0);"><span>Call</span><span
+                                    <li class="submenu submenu-two"><a href="javascript:void(0);"><span>Call</span><span
                                                 class="menu-arrow inside-submenu"></span></a>
                                         <ul>
                                             <li><a href="video-call.html">Video Call</a></li>
@@ -1308,8 +1290,7 @@
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"><img src="{{ asset('') }}assets/img/icons/purchase1.svg"
-                                alt="img"><span>Sales &amp; Purchase</span> <span
-                                class="menu-arrow"></span></a>
+                                alt="img"><span>Sales &amp; Purchase</span> <span class="menu-arrow"></span></a>
                         <ul>
                             <li class="submenu">
                                 <a href="javascript:void(0);"><span>Sales</span><span class="menu-arrow"></span></a>
@@ -1323,8 +1304,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Purchase</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Purchase</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="purchase-list.html"><span>Purchases</span></a></li>
                                     <li><a href="purchase-order-report.html"><span>Purchase Order</span></a></li>
@@ -1335,8 +1315,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Expenses</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Expenses</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="expense-list.html">Expenses</a></li>
                                     <li><a href="expense-category.html">Expense Category</a></li>
@@ -1349,8 +1328,7 @@
                                 alt="img"><span>User Management</span> <span class="menu-arrow"></span></a>
                         <ul>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>People</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>People</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="customers.html"><span>Customers</span></a></li>
                                     <li><a href="suppliers.html"><span>Suppliers</span></a></li>
@@ -1368,8 +1346,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Base UI</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Base UI</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="ui-alerts.html">Alerts</a></li>
                                     <li><a href="ui-accordion.html">Accordion</a></li>
@@ -1420,8 +1397,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Charts</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Charts</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="chart-apex.html">Apex Charts</a></li>
                                     <li><a href="chart-c3.html">Chart C3</a></li>
@@ -1454,8 +1430,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span> Forms</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span> Forms</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li class="submenu submenu-two">
                                         <a href="javascript:void(0);"><span>Form Elements</span><span
@@ -1485,8 +1460,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Tables</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Tables</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="tables-basic.html">Basic Tables </a></li>
                                     <li><a href="data-tables.html">Data Table </a></li>
@@ -1572,16 +1546,14 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Places</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Places</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="countries.html">Countries</a></li>
                                     <li><a href="states.html">States</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Employees</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Employees</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="employees-grid.html"><span>Employees</span></a></li>
                                     <li><a href="department-grid.html"><span>Departments</span></a></li>
