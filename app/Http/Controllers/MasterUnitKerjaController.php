@@ -106,18 +106,12 @@ class MasterUnitKerjaController extends Controller
     public function destroy($id)
     {
         $id = Crypt::decrypt($id);
-        // dd($id);
-        $cek = LaporanDinas::where('UnitKerja', $id)->get();
-        if (count($cek) <= 0) {
-            $data = MasterUnitKerja::find($id);
-            if ($data) {
-                $data->delete();
-                return response()->json(['message' => 'Unit Kerja Berhasil Dihapus'], 200);
-            } else {
-                return response()->json(['message' => 'Unit Kerja Tidak Ditemukan'], 404);
-            }
+        $data = MasterUnitKerja::find($id);
+        if ($data) {
+            $data->delete();
+            return response()->json(['message' => 'Unit Kerja Berhasil Dihapus'], 200);
         } else {
-            return response()->json(['message' => 'Unit Kerja Sedang Digunakan'], 409);
+            return response()->json(['message' => 'Unit Kerja Tidak Ditemukan'], 404);
         }
     }
 }

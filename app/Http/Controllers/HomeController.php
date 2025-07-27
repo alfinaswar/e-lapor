@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MasterStatus;
+use App\Models\MasterUnitKerja;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -24,6 +26,8 @@ class HomeController extends Controller
      */
     public function index(): View
     {
-        return view('home');
+        $units = MasterUnitKerja::get();
+        $status = MasterStatus::get();
+        return view('home', compact('units', 'status'));
     }
 }

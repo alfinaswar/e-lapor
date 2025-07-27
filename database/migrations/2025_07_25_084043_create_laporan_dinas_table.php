@@ -12,20 +12,26 @@ return new class extends Migration {
     {
         Schema::create('laporan_dinas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('UserId')->nullable()->comment('ID user yang membuat laporan');
-            $table->string('SuratTujuan', 255)->nullable()->comment('Nomor atau referensi surat tugas');
-            $table->string('LokasiTujuan', 255)->comment('Lokasi tujuan dinas');
-            $table->string('InstansiTujuan', 255)->comment('Instansi atau lembaga tujuan dinas');
-            $table->string('AlamatInstansi', 255)->comment('Instansi atau lembaga tujuan dinas');
-            $table->date('TanggalBerangkat')->comment('Tanggal berangkat dinas');
-            $table->date('TangalPulang')->comment('Tanggal pulang dinas');
-            $table->text('Uraian')->nullable()->comment('Uraian tugas selama dinas');
-            $table->unsignedBigInteger('approved_by')->nullable()->comment('ID user yang menyetujui laporan');
-            $table->timestamp('approved_at')->nullable()->comment('Waktu persetujuan laporan');
-            $table->text('catatan')->nullable()->comment('Catatan tambahan dari atasan atau admin');
-            $table->softDeletes()->comment('Soft delete untuk laporan dinas');
+            $table->string('UserId')->nullable();
+            $table->string('NomorSurat', 255)->nullable();
+            $table->string('Provinsi', 255);
+            $table->string('Kota', 255);
+            $table->string('Kecamatan', 255);
+            $table->string('Kelurahan', 255);
+            $table->string('Tujuan', 255);
+            $table->string('Alamat', 255);
+            $table->date('TanggalBerangkat');
+            $table->date('TangalPulang');
+            $table->text('Uraian')->nullable();
+            $table->string('DesetujuiOleh')->nullable();
+            $table->timestamp('DisetujuiPada')->nullable();
+            $table->text('catatan')->nullable();
+            $table->string('FileSurat', 255)->nullable();
+            $table->decimal('Latitude', 8, 2)->nullable();
+            $table->decimal('Longitude', 8, 2)->nullable();
+            $table->text('TagLokasi')->nullable();
+            $table->softDeletes();
             $table->timestamps();
-
         });
     }
 
