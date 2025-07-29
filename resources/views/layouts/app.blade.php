@@ -13,7 +13,8 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('') }}assets/img/favicon.png">
-
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/select2/css/select2.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('') }}assets/css/bootstrap.min.css">
 
@@ -113,14 +114,14 @@
                                     <h6><span><i data-feather="user" class="feather-16"></i></span>Customers</h6>
                                     <ul class="customers">
                                         <li><a href="javascript:void(0);">Aron Varu<img
-                                                    src="{{ asset('') }}assets/img/profiles/avator1.jpg"
-                                                    alt="" class="img-fluid"></a></li>
+                                                    src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt=""
+                                                    class="img-fluid"></a></li>
                                         <li><a href="javascript:void(0);">Jonita<img
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-01.jpg"
-                                                    alt="" class="img-fluid"></a></li>
+                                                    src="{{ asset('') }}assets/img/profiles/avatar-01.jpg" alt=""
+                                                    class="img-fluid"></a></li>
                                         <li><a href="javascript:void(0);">Aaron<img
-                                                    src="{{ asset('') }}assets/img/profiles/avatar-10.jpg"
-                                                    alt="" class="img-fluid"></a></li>
+                                                    src="{{ asset('') }}assets/img/profiles/avatar-10.jpg" alt=""
+                                                    class="img-fluid"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -138,8 +139,7 @@
                     <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
                         <span class="user-info">
                             <span class="user-letter">
-                                <img src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt=""
-                                    class="img-fluid">
+                                <img src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt="" class="img-fluid">
                             </span>
                             <span class="user-detail">
                                 <span class="user-name">{{ auth()->user()->name }}</span>
@@ -151,8 +151,7 @@
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <div class="profileset">
-                                <span class="user-img"><img src="{{ asset('') }}assets/img/profiles/avator1.jpg"
-                                        alt="">
+                                <span class="user-img"><img src="{{ asset('') }}assets/img/profiles/avator1.jpg" alt="">
                                     <span class="status online"></span></span>
                                 <div class="profilesets">
                                     <h6>{{ auth()->user()->name }}</h6>
@@ -163,8 +162,7 @@
                             <hr class="m-0">
                             <a class="dropdown-item logout pb-0" href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><img
-                                    src="{{ asset('') }}assets/img/icons/log-out.svg" class="me-2"
-                                    alt="img">Keluar</a>
+                                    src="{{ asset('') }}assets/img/icons/log-out.svg" class="me-2" alt="img">Keluar</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
@@ -229,6 +227,13 @@
                                     </a>
                                     <ul>
                                         <li>
+                                            <a href="{{ route('atasan.index') }}">
+                                                <i data-feather="users"
+                                                    style="width:18px;height:18px;margin-right:8px;"></i>
+                                                <span>Master Atasan</span>
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('muk.index') }}">
                                                 <i data-feather="briefcase"
                                                     style="width:18px;height:18px;margin-right:8px;"></i>
@@ -242,6 +247,7 @@
                                                 <span>Master Status</span>
                                             </a>
                                         </li>
+
                                     </ul>
                                 </li>
                             </ul>
@@ -306,9 +312,8 @@
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="tablinks nav-link active" href="#set4" id="set-tab4"
-                                    data-bs-toggle="tab" data-bs-target="#document" role="tab"
-                                    aria-selected="true">
+                                <a class="tablinks nav-link active" href="#set4" id="set-tab4" data-bs-toggle="tab"
+                                    data-bs-target="#document" role="tab" aria-selected="true">
                                     <i data-feather="user"></i>
                                 </a>
                             </li>
@@ -341,8 +346,7 @@
                                         class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="chat.html">Chat</a></li>
-                                    <li class="submenu submenu-two"><a
-                                            href="javascript:void(0);"><span>Call</span><span
+                                    <li class="submenu submenu-two"><a href="javascript:void(0);"><span>Call</span><span
                                                 class="menu-arrow inside-submenu"></span></a>
                                         <ul>
                                             <li><a href="video-call.html">Video Call</a></li>
@@ -388,8 +392,7 @@
                             <li><a href="stock-adjustment.html"><span>Stock Adjustment</span></a></li>
                             <li><a href="stock-transfer.html"><span>Stock Transfer</span></a></li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Expenses</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Expenses</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="expense-list.html">Expenses</a></li>
                                     <li><a href="expense-category.html">Expense Category</a></li>
@@ -768,8 +771,7 @@
                                         class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="chat.html">Chat</a></li>
-                                    <li class="submenu submenu-two"><a
-                                            href="javascript:void(0);"><span>Call</span><span
+                                    <li class="submenu submenu-two"><a href="javascript:void(0);"><span>Call</span><span
                                                 class="menu-arrow inside-submenu"></span></a>
                                         <ul>
                                             <li><a href="video-call.html">Video Call</a></li>
@@ -820,8 +822,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Purchase</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Purchase</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="purchase-list.html"><span>Purchases</span></a></li>
                                     <li><a href="purchase-order-report.html"><span>Purchase Order</span></a></li>
@@ -832,8 +833,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Expenses</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Expenses</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="expense-list.html">Expenses</a></li>
                                     <li><a href="expense-category.html">Expense Category</a></li>
@@ -1071,8 +1071,7 @@
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);"><span>Employees</span><span
-                                        class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);"><span>Employees</span><span class="menu-arrow"></span></a>
                                 <ul>
                                     <li><a href="employees-grid.html"><span>Employees</span></a></li>
                                     <li><a href="department-grid.html"><span>Departments</span></a></li>
@@ -1248,10 +1247,12 @@
     <script src="{{ asset('') }}assets/js/dataTables.bootstrap5.min.js"></script>
     <!-- Bootstrap Core JS -->
     <script src="{{ asset('') }}assets/js/bootstrap.bundle.min.js"></script>
-
+    <!-- Select2 JS -->
+    <script src="{{ asset('') }}assets/plugins/select2/js/select2.min.js"></script>
     <!-- Custom JS -->
     <script src="{{ asset('') }}assets/js/theme-script.js"></script>
     <script src="{{ asset('') }}assets/js/script.js"></script>
+    <script src="{{ asset('') }}assets/js/custom-select2.js"></script>
 
     <!-- Summernote JS -->
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>

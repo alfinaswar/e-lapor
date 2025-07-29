@@ -3,6 +3,7 @@
 use App\Http\Controllers\DependentDropdownController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LaporanDinasController;
+use App\Http\Controllers\MasterAtasanController;
 use App\Http\Controllers\MasterStatusController;
 use App\Http\Controllers\MasterUnitKerjaController;
 use App\Http\Controllers\ProductController;
@@ -43,6 +44,14 @@ Route::group(['middleware' => ['auth']], function () {
         Route::put('/update-data/{id}', [MasterUnitKerjaController::class, 'update'])->name('muk.update');
         Route::delete('/{id}', [MasterUnitKerjaController::class, 'destroy'])->name('muk.destroy');
     });
+    Route::prefix('master-atasan')->group(function () {
+        Route::get('/', [MasterAtasanController::class, 'index'])->name('atasan.index');
+        Route::get('/create', [MasterAtasanController::class, 'create'])->name('atasan.create');
+        Route::post('/', [MasterAtasanController::class, 'store'])->name('atasan.store');
+        Route::get('/edit-master-atasan/{id}', [MasterAtasanController::class, 'edit'])->name('atasan.edit');
+        Route::put('/update-data/{id}', [MasterAtasanController::class, 'update'])->name('atasan.update');
+        Route::delete('/{id}', [MasterAtasanController::class, 'destroy'])->name('atasan.destroy');
+    });
     Route::prefix('master-status')->group(function () {
         Route::get('/', [MasterStatusController::class, 'index'])->name('status.index');
         Route::get('/create', [MasterStatusController::class, 'create'])->name('status.create');
@@ -60,6 +69,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::put('/{id}', [LaporanDinasController::class, 'update'])->name('laporan-dinas.update');
         Route::delete('/{id}', [LaporanDinasController::class, 'destroy'])->name('laporan-dinas.destroy');
     });
+
 });
 
 Route::get('provinces', [DependentDropdownController::class, 'provinces'])->name('provinces');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MasterUnitKerja;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -34,8 +35,9 @@ class UserController extends Controller
      */
     public function create(): View
     {
+        $unit = MasterUnitKerja::get();
         $roles = Role::pluck('name', 'name')->all();
-        return view('users.create', compact('roles'));
+        return view('users.create', compact('roles', 'unit'));
     }
 
     /**
@@ -46,6 +48,7 @@ class UserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        // dd($request->all());
         $validator = Validator::make($request->all(), [
             'username' => 'required|string|max:50|unique:users,username',
             'name' => 'required|string|max:200',
@@ -62,8 +65,7 @@ class UserController extends Controller
             'foto_profil' => 'nullable|file|image|max:2048',
             'pekerjaan' => 'nullable|string|max:100',
             'status_perkawinan' => 'required|in:Belum Menikah,Menikah,Cerai',
-            'shift' => 'required|in:Pagi,Siang,Malam',
-            'roles' => 'required',
+            'role' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -79,10 +81,15 @@ class UserController extends Controller
             $file->storeAs('public/foto_profil', $file->getClientOriginalName());
             $input['foto_profil'] = $file->getClientOriginalName();
         }
+        if ($request->hasFile('ttd')) {
+            $file = $request->file('ttd');
+            $file->storeAs('public/ttd', $file->getClientOriginalName());
+            $input['ttd'] = $file->getClientOriginalName();
+        }
         $input['password'] = Hash::make($input['password']);
 
         $user = User::create($input);
-        $user->assignRole($request->input('roles'));
+        $user->assignRole($request->input('role'));
 
         return redirect()->route('users.index')
             ->with('success', 'User created successfully');

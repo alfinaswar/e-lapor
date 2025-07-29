@@ -38,250 +38,167 @@
             </div>
         </div>
         <div class="card-body">
-            <ul class="nav nav-pills nav-justified mb-3 d-sm-flex d-block" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page" href="#surat-tugas"
-                        aria-selected="true">Surat Tugas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" role="tab" aria-current="page" href="#uraian-dinas"
-                        aria-selected="true">Rincian Kegiatan Dinas</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane show active text-muted" id="surat-tugas" role="tabpanel">
-                    <form action="{{ route('laporan-dinas.store') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="row g-3">
+            <form action="{{ route('laporan-dinas.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="row g-3">
 
-                            <div class="col-md-6">
-                                <label for="NomorSurat" class="form-label"><strong>Nomor
-                                        Surat</strong></label>
-                                <input type="text" name="NomorSurat"
-                                    class="form-control @error('NomorSurat') is-invalid @enderror" id="NomorSurat"
-                                    placeholder="Nomor Surat" value="{{ old('NomorSurat') }}">
-                                @error('NomorSurat')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="NomorSurat" class="form-label"><strong>Nomor
+                                Surat</strong></label>
+                        <input type="text" name="NomorSurat"
+                            class="form-control @error('NomorSurat') is-invalid @enderror" id="NomorSurat"
+                            placeholder="Nomor Surat" value="{{ old('NomorSurat') }}">
+                        @error('NomorSurat')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="Provinsi" class="form-label"><strong>Provinsi</strong></label>
-                                <input type="text" name="Provinsi"
-                                    class="form-control @error('Provinsi') is-invalid @enderror" id="Provinsi"
-                                    placeholder="Provinsi" value="{{ old('Provinsi') }}">
-                                @error('Provinsi')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="Provinsi" class="form-label"><strong>Provinsi</strong></label>
+                        <input type="text" name="Provinsi"
+                            class="form-control @error('Provinsi') is-invalid @enderror" id="Provinsi"
+                            placeholder="Provinsi" value="{{ old('Provinsi') }}">
+                        @error('Provinsi')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="Kota" class="form-label"><strong>Kota</strong></label>
-                                <input type="text" name="Kota"
-                                    class="form-control @error('Kota') is-invalid @enderror" id="Kota"
-                                    placeholder="Kota" value="{{ old('Kota') }}">
-                                @error('Kota')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="Kota" class="form-label"><strong>Kota</strong></label>
+                        <input type="text" name="Kota"
+                            class="form-control @error('Kota') is-invalid @enderror" id="Kota"
+                            placeholder="Kota" value="{{ old('Kota') }}">
+                        @error('Kota')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="Kecamatan" class="form-label"><strong>Kecamatan</strong></label>
-                                <input type="text" name="Kecamatan"
-                                    class="form-control @error('Kecamatan') is-invalid @enderror" id="Kecamatan"
-                                    placeholder="Kecamatan" value="{{ old('Kecamatan') }}">
-                                @error('Kecamatan')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="Kecamatan" class="form-label"><strong>Kecamatan</strong></label>
+                        <input type="text" name="Kecamatan"
+                            class="form-control @error('Kecamatan') is-invalid @enderror" id="Kecamatan"
+                            placeholder="Kecamatan" value="{{ old('Kecamatan') }}">
+                        @error('Kecamatan')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="Kelurahan" class="form-label"><strong>Kelurahan</strong></label>
-                                <input type="text" name="Kelurahan"
-                                    class="form-control @error('Kelurahan') is-invalid @enderror" id="Kelurahan"
-                                    placeholder="Kelurahan" value="{{ old('Kelurahan') }}">
-                                @error('Kelurahan')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="Kelurahan" class="form-label"><strong>Kelurahan</strong></label>
+                        <input type="text" name="Kelurahan"
+                            class="form-control @error('Kelurahan') is-invalid @enderror" id="Kelurahan"
+                            placeholder="Kelurahan" value="{{ old('Kelurahan') }}">
+                        @error('Kelurahan')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="Tujuan" class="form-label"><strong>Tujuan</strong></label>
-                                <input type="text" name="Tujuan"
-                                    class="form-control @error('Tujuan') is-invalid @enderror" id="Tujuan"
-                                    placeholder="Tujuan" value="{{ old('Tujuan') }}">
-                                @error('Tujuan')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="Tujuan" class="form-label"><strong>Tujuan</strong></label>
+                        <input type="text" name="Tujuan"
+                            class="form-control @error('Tujuan') is-invalid @enderror" id="Tujuan"
+                            placeholder="Tujuan" value="{{ old('Tujuan') }}">
+                        @error('Tujuan')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-12">
-                                <label for="Alamat" class="form-label"><strong>Alamat</strong></label>
-                                <textarea name="Alamat" id="Alamat" class="form-control @error('Alamat') is-invalid @enderror" rows="4"
-                                    placeholder="Alamat">{{ old('Alamat') }}</textarea>
-                                @error('Alamat')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-12">
+                        <label for="Alamat" class="form-label"><strong>Alamat</strong></label>
+                        <textarea name="Alamat" id="Alamat" class="form-control @error('Alamat') is-invalid @enderror" rows="4"
+                            placeholder="Alamat">{{ old('Alamat') }}</textarea>
+                        @error('Alamat')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="TanggalBerangkat" class="form-label"><strong>Tanggal
-                                        Berangkat</strong></label>
-                                <input type="date" name="TanggalBerangkat"
-                                    class="form-control @error('TanggalBerangkat') is-invalid @enderror"
-                                    id="TanggalBerangkat" placeholder="Tanggal Berangkat"
-                                    value="{{ old('TanggalBerangkat') }}">
-                                @error('TanggalBerangkat')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="TanggalBerangkat" class="form-label"><strong>Tanggal
+                                Berangkat</strong></label>
+                        <input type="date" name="TanggalBerangkat"
+                            class="form-control @error('TanggalBerangkat') is-invalid @enderror"
+                            id="TanggalBerangkat" placeholder="Tanggal Berangkat"
+                            value="{{ old('TanggalBerangkat') }}">
+                        @error('TanggalBerangkat')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <label for="TanggalPulang" class="form-label"><strong>Tanggal
-                                        Pulang</strong></label>
-                                <input type="date" name="TanggalPulang"
-                                    class="form-control @error('TanggalPulang') is-invalid @enderror" id="TanggalPulang"
-                                    placeholder="Tanggal Pulang" value="{{ old('TanggalPulang') }}">
-                                @error('TanggalPulang')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                    <div class="col-md-6">
+                        <label for="TanggalPulang" class="form-label"><strong>Tanggal
+                                Pulang</strong></label>
+                        <input type="date" name="TanggalPulang"
+                            class="form-control @error('TanggalPulang') is-invalid @enderror" id="TanggalPulang"
+                            placeholder="Tanggal Pulang" value="{{ old('TanggalPulang') }}">
+                        @error('TanggalPulang')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-12">
-                                <label for="Uraian" class="form-label"><strong>Uraian</strong></label>
-                                <div id="quill-editor" class="mb-3" style="height: 300px;">
-                                </div>
-                                <textarea rows="3" class="mb-3 d-none" name="Uraian" id="quill-editor-area"></textarea>
-                                @error('Uraian')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="FileSurat" class="form-label"><strong>File Surat</strong></label>
-
-                                <div id="drop-zone"
-                                    class="dropzone-wrapper border border-2 border-dashed rounded-3 p-4 text-center">
-                                    <div class="dropzone-desc text-muted mb-2">
-                                        <i class="fa fa-cloud-upload fa-2x d-block mb-2"></i>
-                                        <span>Tarik file ke sini atau klik untuk memilih</span>
-                                    </div>
-                                    <input type="file" name="FileSurat" id="FileSurat"
-                                        class="dropzone-input d-none" />
-                                    <div id="file-name-preview" class="mt-2 text-primary fw-bold small"></div>
-                                </div>
-
-                                @error('FileSurat')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-
-                            <div class="col-12 text-end mt-3">
-                                <a href="{{ route('laporan-dinas.index') }}" class="btn btn-secondary me-2">
-                                    <i class="fa fa-arrow-left"></i> Kembali
-                                </a>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-save"></i> Simpan
-                                </button>
-                            </div>
-
+                    <div class="col-md-12">
+                        <label for="Uraian" class="form-label"><strong>Uraian</strong></label>
+                        <div id="quill-editor" class="mb-3" style="height: 300px;">
                         </div>
-                    </form>
-                </div>
-                <div class="tab-pane text-muted" id="uraian-dinas" role="tabpanel">
-                    <form>
-                        <div class="mb-3">
-                            <label for="jenis_isian" class="form-label"><strong>Jenis
-                                    Isian</strong></label>
-                            <select name="jenis_isian" id="jenis_isian" class="form-select">
-                                <option value="1harian" selected>1 Hari</option>
-                                <option value="range">Lebih dari 1 Hari</option>
-                            </select>
+                        <textarea rows="3" class="mb-3 d-none" name="Uraian" id="quill-editor-area"></textarea>
+                        @error('Uraian')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="FileSurat" class="form-label"><strong>File Surat</strong></label>
+
+                        <div id="drop-zone"
+                            class="dropzone-wrapper border border-2 border-dashed rounded-3 p-4 text-center">
+                            <div class="dropzone-desc text-muted mb-2">
+                                <i class="fa fa-cloud-upload fa-2x d-block mb-2"></i>
+                                <span>Tarik file ke sini atau klik untuk memilih</span>
+                            </div>
+                            <input type="file" name="FileSurat" id="FileSurat"
+                                class="dropzone-input d-none" />
+                            <div id="file-name-preview" class="mt-2 text-primary fw-bold small"></div>
                         </div>
 
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="Tanggal" class="form-label"><strong>Tanggal</strong></label>
-                                <input type="date" name="Tanggal" id="Tanggal"
-                                    class="form-control @error('Tanggal') is-invalid @enderror"
-                                    value="{{ old('Tanggal') }}">
-                                @error('Tanggal')
-                                    <div class="text-danger mt-1">{{ $message }}</div>
-                                @enderror
+                        @error('FileSurat')
+                            <div class="text-danger mt-1">
+                                {{ $message }}
                             </div>
-
-                            <div class="col-md-6" id="tanggal_selesai_group" style="display: none;">
-                                <label for="TanggalSelesai" class="form-label"><strong>Tanggal
-                                        Selesai</strong></label>
-                                <input type="date" name="TanggalSelesai" id="TanggalSelesai"
-                                    class="form-control @error('TanggalSelesai') is-invalid @enderror"
-                                    value="{{ old('TanggalSelesai') }}">
-                                @error('TanggalSelesai')
-                                    <div class="text-danger mt-1">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="UraianKegiatan" class="form-label"><strong>Uraian
-                                        Kegiatan</strong></label>
-                                <div id="quill-editor2" class="mb-3" style="height: 300px;">
-                                </div>
-                                <textarea rows="3" class="mb-3 d-none" name="Uraian" id="quill-editor-area2"></textarea>
-                                @error('UraianKegiatan')
-                                    <div class="text-danger mt-1">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="BuktiDukung" class="form-label"><strong>Bukti / Dokumen
-                                        Pendukung</strong></label>
-
-                                <div id="drop-zone2"
-                                    class="dropzone-wrapper border border-2 border-dashed rounded-3 p-4 text-center">
-                                    <div class="dropzone-desc text-muted mb-2">
-                                        <i class="fa fa-cloud-upload fa-2x d-block mb-2"></i>
-                                        <span>Tarik file ke sini atau klik untuk memilih</span>
-                                    </div>
-                                    <input type="file" name="BuktiDukung[]" id="BuktiDukung"
-                                        class="dropzone-input d-none" multiple />
-                                    <div id="file-name-preview-2" class="mt-2 text-primary small fw-semibold"></div>
-                                </div>
+                        @enderror
+                    </div>
 
 
-                                @error('BuktiDukung')
-                                    <div class="text-danger mt-1">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                    </form>
+                    <div class="col-12 text-end mt-3">
+                        <a href="{{ route('laporan-dinas.index') }}" class="btn btn-secondary me-2">
+                            <i class="fa fa-arrow-left"></i> Kembali
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-save"></i> Simpan
+                        </button>
+                    </div>
+
                 </div>
-            </div>
+            </form>
         </div>
-    </div>
     </div>
 @endsection
 @push('js')
